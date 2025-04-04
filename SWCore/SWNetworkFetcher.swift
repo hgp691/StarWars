@@ -2,6 +2,12 @@ import Foundation
 
 struct SWNetworkFecther {
     
+    enum NetworkingServerError: Error {
+        case userError
+        case serverError
+        case invalidResponse
+    }
+    
     let urlSession: URLSession
     let decoder: JSONDecoder
     
@@ -11,10 +17,19 @@ struct SWNetworkFecther {
     }
     
     func fetch<T: Decodable>(endpoint: SWEndpoint) async throws -> T {
-        let (data, _) = try await urlSession.data(for: endpoint.urlRequest)
-        let response = try decoder.decode(T.self, from: data)
-        return response
+        let (data, response) = try await urlSession.data(for: endpoint.urlRequest)
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw NetworkingServerError.invalidResponse
+        }
+        switch httpResponse.statusCode {
+        case 200..<300:
+            let decodedData = try decoder.decode(T.self, from: data)
+            return decodedData
+        case 400..<500:
+            throw NetworkingServerError.userError
+        default:
+            throw NetworkingServerError.serverError
+        }
     }
-    
-    
+
 }

@@ -23,6 +23,9 @@
 		D6A972382D9EE83600D93ABC /* SWNetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A972372D9EE83600D93ABC /* SWNetworkFetcher.swift */; };
 		D6A9723A2D9EE86600D93ABC /* SWEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A972392D9EE86600D93ABC /* SWEndpoint.swift */; };
 		D6A9723C2D9EFE8200D93ABC /* SWDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9723B2D9EFE8200D93ABC /* SWDataProvider.swift */; };
+		D6A9723F2D9F22CA00D93ABC /* SWPeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9723E2D9F22CA00D93ABC /* SWPeopleModel.swift */; };
+		D6A972412D9F277C00D93ABC /* NetworkFetcherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A972402D9F277C00D93ABC /* NetworkFetcherTest.swift */; };
+		D6A972442D9F29AE00D93ABC /* SWMockResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A972432D9F29AE00D93ABC /* SWMockResponses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,9 @@
 		D6A972372D9EE83600D93ABC /* SWNetworkFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWNetworkFetcher.swift; sourceTree = "<group>"; };
 		D6A972392D9EE86600D93ABC /* SWEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWEndpoint.swift; sourceTree = "<group>"; };
 		D6A9723B2D9EFE8200D93ABC /* SWDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDataProvider.swift; sourceTree = "<group>"; };
+		D6A9723E2D9F22CA00D93ABC /* SWPeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPeopleModel.swift; sourceTree = "<group>"; };
+		D6A972402D9F277C00D93ABC /* NetworkFetcherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetcherTest.swift; sourceTree = "<group>"; };
+		D6A972432D9F29AE00D93ABC /* SWMockResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMockResponses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +186,9 @@
 		D6A971CF2D9DE93A00D93ABC /* StarWarsTests */ = {
 			isa = PBXGroup;
 			children = (
+				D6A972422D9F298F00D93ABC /* MockResponses */,
 				D6A971D02D9DE93A00D93ABC /* StarWarsTests.swift */,
+				D6A972402D9F277C00D93ABC /* NetworkFetcherTest.swift */,
 			);
 			path = StarWarsTests;
 			sourceTree = "<group>";
@@ -201,6 +209,7 @@
 				D6A972372D9EE83600D93ABC /* SWNetworkFetcher.swift */,
 				D6A972392D9EE86600D93ABC /* SWEndpoint.swift */,
 				D6A9723B2D9EFE8200D93ABC /* SWDataProvider.swift */,
+				D6A9723D2D9F22B300D93ABC /* Models */,
 			);
 			path = SWCore;
 			sourceTree = "<group>";
@@ -211,6 +220,22 @@
 				D6A9722E2D9EE7DD00D93ABC /* SWDesign.h */,
 			);
 			path = SWDesign;
+			sourceTree = "<group>";
+		};
+		D6A9723D2D9F22B300D93ABC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D6A9723E2D9F22CA00D93ABC /* SWPeopleModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D6A972422D9F298F00D93ABC /* MockResponses */ = {
+			isa = PBXGroup;
+			children = (
+				D6A972432D9F29AE00D93ABC /* SWMockResponses.swift */,
+			);
+			path = MockResponses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,6 +462,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6A972412D9F277C00D93ABC /* NetworkFetcherTest.swift in Sources */,
+				D6A972442D9F29AE00D93ABC /* SWMockResponses.swift in Sources */,
 				D6A971D12D9DE93A00D93ABC /* StarWarsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +484,7 @@
 				D6A9723C2D9EFE8200D93ABC /* SWDataProvider.swift in Sources */,
 				D6A9723A2D9EE86600D93ABC /* SWEndpoint.swift in Sources */,
 				D6A972382D9EE83600D93ABC /* SWNetworkFetcher.swift in Sources */,
+				D6A9723F2D9F22CA00D93ABC /* SWPeopleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
