@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct SWPeopleModel: Decodable {
-    let name: String
-    let films: [URL]
+public struct SWPeopleModel: Decodable {
+    public let name: String
+    public let films: [URL]
 }
 
-struct SWPeopleResponse: Decodable {
-    let results: [SWPeopleModel]
+public struct SWPeopleResponse: Decodable {
+    public let results: [SWPeopleModel]
 }
 
 

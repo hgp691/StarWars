@@ -69,7 +69,7 @@ final class NetworkFetcherTest: XCTestCase {
         
         // Then
         do {
-            let people: SWPeopleModel = try await networkFetcher.fetch(endpoint: endpoint)
+            let _: SWPeopleModel = try await networkFetcher.fetch(endpoint: endpoint)
             XCTFail()
         } catch {
             XCTAssertNotNil(error)
@@ -97,7 +97,7 @@ final class NetworkFetcherTest: XCTestCase {
         
         // Then
         do {
-            let people: SWPeopleModel = try await networkFetcher.fetch(endpoint: endpoint)
+            let _: SWPeopleModel = try await networkFetcher.fetch(endpoint: endpoint)
             XCTFail()
         } catch {
             XCTAssertEqual(try XCTUnwrap(error as? SWNetworkFecther.NetworkingServerError), userError)
@@ -125,7 +125,7 @@ final class NetworkFetcherTest: XCTestCase {
         
         // Then
         do {
-            let people: SWPeopleModel = try await networkFetcher.fetch(endpoint: endpoint)
+            let _: SWPeopleModel = try await networkFetcher.fetch(endpoint: endpoint)
             XCTFail()
         } catch {
             XCTAssertEqual(try XCTUnwrap(error as? SWNetworkFecther.NetworkingServerError), userError)
@@ -155,7 +155,7 @@ final class NetworkFetcherTest: XCTestCase {
         
         // Then
         do {
-            let people: SWPeopleModel = try await networkFetcher.fetch(endpoint: endpoint)
+            let _: SWPeopleModel = try await networkFetcher.fetch(endpoint: endpoint)
             XCTFail()
         } catch {
             XCTAssertEqual(try XCTUnwrap(error as? SWNetworkFecther.NetworkingServerError), userError)

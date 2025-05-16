@@ -28,7 +28,7 @@ enum SWFilmsEndpoint: SWEndpoint {
 
 enum SWPeopleEndpoint: SWEndpoint {
     
-    static let domain = "https://swapi.dev/api/"
+    static let domain = "https://swapi.py4e.com/api/"
     
     case peopleByPage(Int)
     case peopleById(Int)
