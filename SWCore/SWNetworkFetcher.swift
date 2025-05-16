@@ -1,6 +1,6 @@
 import Foundation
 
-struct SWNetworkFecther {
+public struct SWNetworkFecther {
     
     enum NetworkingServerError: Error {
         case userError
@@ -8,10 +8,10 @@ struct SWNetworkFecther {
         case invalidResponse
     }
     
-    let urlSession: URLSession
-    let decoder: JSONDecoder
+    public let urlSession: URLSession
+    public let decoder: JSONDecoder
     
-    init(urlSession: URLSession = URLSession.shared, decoder: JSONDecoder = JSONDecoder()) {
+    public init(urlSession: URLSession = URLSession.shared, decoder: JSONDecoder = JSONDecoder()) {
         self.urlSession = urlSession
         self.decoder = decoder
     }
